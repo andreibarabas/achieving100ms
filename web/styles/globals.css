@@ -14,3 +14,20 @@ a {
 * {
   box-sizing: border-box;
 }
+
+.main-banner {
+  overflow: hidden;
+  position: relative;
+}
+
+.main-banner-item {
+  position: relative;
+  z-index: 1;
+  background-image: url(/images/background.jpg);
+  background-position: center center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  overflow: hidden;
+  height: 630px;
+  background-attachment: fixed;
+}
