@@ -1,31 +1,34 @@
 export const Hero: React.FC = () => {
   return (
-    <div className="main-banner">
-      <div className="main-banner-item item-two">
-        <div className="d-table">
-          <div className="d-table-cell">
-            <div className="container-fluid">
-              <div className="row align-items-center">
-                <div className="col-lg-6">
-                  <div className="main-banner-content">
-                    <h1>We Provide Digital Marketing Solutions</h1>
-                    <p>
-                      Lorem ipsum dolor sit amet, consectetur adipiscing elit,
-                      sed do eiusmod tempor incididunt ut labore et dolore magna
-                      aliqua. Quis ipsum suspendisse ultrices gravida. Risus
-                      commodo viverra maecenas accumsan lacus vel facilisis.
-                    </p>
-                    <div className="banner-btn">
-                      <a className="default-btn">Get Started</a>
-                    </div>
-                  </div>
-                </div>
-                <div className="col-lg-6">
-                  <div className="main-banner-image">
-                    <img src="/images/woman.png" alt="image" />
-                  </div>
-                </div>
-              </div>
+    <div className="hero-background">
+      <div className="container col-xxl-8 px-4 py-5">
+        <div className="row flex-lg-row-reverse align-items-center g-5 py-5">
+          <div className="col-10 col-sm-8 col-lg-6">
+            <img
+              className="d-block mx-lg-auto img-fluid"
+              src="/images/woman.png"
+              alt="image"
+              width="700"
+              height="500"
+              loading="lazy"
+            />
+          </div>
+          <div className="col-lg-6">
+            <h1 className="display-5 fw-bold lh-1 mb-3">
+              Before applying optimization
+            </h1>
+            <p className="lead">
+              This example is ment to showcase tips&trics on how to optimize
+              responsive images and what is the impact on the page loading
+              speed.
+            </p>
+            <div className="d-grid gap-2 d-md-flex justify-content-md-start">
+              <button
+                type="button"
+                className="btn btn-primary btn-lg px-4 me-md-2"
+              >
+                Get started
+              </button>
             </div>
           </div>
         </div>
