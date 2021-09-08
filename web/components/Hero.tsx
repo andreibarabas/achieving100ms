@@ -10,7 +10,6 @@ export const Hero: React.FC = () => {
               alt="image"
               width="700"
               height="500"
-              loading="lazy"
             />
           </div>
           <div className="col-lg-6">
