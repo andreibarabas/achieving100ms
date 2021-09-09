@@ -4,7 +4,7 @@
 
 ## Why 100ms?
 
-`100ms` is the Holy Grail when developing products, as it provides the ultimate experience for people using it.
+`100ms` is the Holy Grail of product development, as it provides the ultimate experience for people using it.
 
 According to the [Usability Engineering Study (1993)](https://www.nngroup.com/articles/response-times-3-important-limits/), `100ms` is about the limit for having the user feel that the system is `reacting instantaneously`, meaning that no special feedback is necessary except to display the result.
 
@@ -20,4 +20,4 @@ Bellow you can find a list of tips & tricks that can help you achieve that goal.
 
 ## Special Thanks
 
-- @wcandillon, maker of the [“Can it be done in React Native?”](https://github.com/wcandillon/can-it-be-done-in-react-native) YouTube series, for being a source of inspiration.
+- [William Candillon](https://github.com/wcandillon), maker of the [“Can it be done in React Native?”](https://github.com/wcandillon/can-it-be-done-in-react-native) YouTube series, for being a source of inspiration.
