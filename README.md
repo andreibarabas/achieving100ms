@@ -29,11 +29,22 @@ Pretty straight forward. It's a little bit of work to prepare upfront all the im
 
 If you are using NextJS, you don't need to prepare the images upfront if you use their `Image` component.
 
-[See it in practice](https://github.com/andreibarabas/achieving-100ms/compare/S01.E01-before...S01.E01-after)
+```
+import Image from "next/image";
 
-## Results
+...
 
-| Before                                                                                                                                              | After                                                                                                                                              |
+<Image
+    src={WomanPicture}
+    layout="responsive" //don't forget this attribute
+    />
+```
+
+[See code](https://github.com/andreibarabas/achieving-100ms/compare/S01.E01-before...S01.E01-after)
+
+# Benchmarks
+
+| Before optimization                                                                                                                                 | After optimization                                                                                                                                 |
 | --------------------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------- |
 | [Demo](https://achieving-100ms-git-s01e01-before-andreibarabas.vercel.app)                                                                          | [Demo](https://achieving-100ms-git-s01e01-after-andreibarabas.vercel.app)                                                                          |
 | Time to Interactive: `4.2s`                                                                                                                         | Time to Interactive: `1.5s (~2.8x speed increase)`                                                                                                 |
