@@ -18,7 +18,9 @@ export const Hero: React.FC = () => {
           <div className="col-10 col-sm-8 col-lg-6">
             {/* ----------------------- */}
             <img
+              className="d-block mx-lg-auto img-fluid"
               src="/images/woman.png"
+              alt="image"
               sizes="100vw"
               srcSet="
         /images/woman-640w.png 640w,
