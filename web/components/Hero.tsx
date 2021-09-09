@@ -4,6 +4,7 @@ export const Hero: React.FC = () => {
   return (
     <div>
       <div className="background-container">
+        {/* NextJS version for using responsive images as background */}
         <Image
           priority={true}
           src={BackgroundImage}
@@ -17,9 +18,16 @@ export const Hero: React.FC = () => {
           <div className="col-10 col-sm-8 col-lg-6">
             {/* ----------------------- */}
             <img
-              className="d-block mx-lg-auto img-fluid"
-              src={WomanPicture}
-              layout="responsive"
+              src="/images/woman.png"
+              sizes="100vw"
+              srcSet="
+        /images/woman-640w.png 640w,
+        /images/woman-750w.png 750w,
+        /images/woman-828w.png 828w,
+        /images/woman-1080w.png 1080w,
+        /images/woman-1200w.png 1200w,
+        /images/woman-2048w.png 2048w,
+        /images/woman-3840w.png 3840w"
             />
             {/* ----------------------- */}
           </div>
