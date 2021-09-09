@@ -6,6 +6,7 @@ export const Hero: React.FC = () => {
   return (
     <div>
       <div className="background-container">
+        {/* NextJS version for using responsive images as background */}
         <Image
           priority={true}
           src={BackgroundImage}
@@ -21,7 +22,7 @@ export const Hero: React.FC = () => {
             <Image
               className="d-block mx-lg-auto img-fluid"
               src={WomanPicture}
-              layout="responsive"
+              layout="responsive" //don't forget this attribute as this is the one that builds all the srcset seen above
             />
             {/* ----------------------- */}
           </div>
