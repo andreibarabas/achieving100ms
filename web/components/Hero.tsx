@@ -22,12 +22,12 @@ export const Hero: React.FC = () => {
               speed.
             </p>
             <div className="d-grid gap-2 d-md-flex justify-content-md-start">
-              <button
-                type="button"
+              <a
+                href="https://github.com/andreibarabas/achieving-100ms/blob/S01.E01-before/README"
                 className="btn btn-primary btn-lg px-4 me-md-2"
               >
-                Get started
-              </button>
+                Learn more
+              </a>
             </div>
           </div>
         </div>
