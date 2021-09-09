@@ -1,6 +1,6 @@
 ## S1.E1
 
-# How to speed up your website 2.5x by optimizing responsive images
+# How to speed up your website 2.5x times by using responsive images
 
 ## Tips & Tricks
 
