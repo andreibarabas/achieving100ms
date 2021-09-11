@@ -16,6 +16,7 @@ export const Hero: React.FC = () => {
         /images/woman-828w.png 828w,
         /images/woman-1080w.png 1080w,
         /images/woman-1200w.png 1200w,
+        /images/woman-1920w.png 1920w,
         /images/woman-2048w.png 2048w,
         /images/woman-3840w.png 3840w"
             />
