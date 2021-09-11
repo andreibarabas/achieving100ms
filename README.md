@@ -4,8 +4,6 @@
 
 ## Tips & Tricks
 
-### 1) Plain HTML
-
 Instead of using the regular `<img src="{url}" />` tag, also specify a set of variants using the `srcset` attribute so that the browser can pick the correct version based on the device type and screen size.
 
 ```
@@ -24,21 +22,6 @@ Instead of using the regular `<img src="{url}" />` tag, also specify a set of va
 ```
 
 Pretty straight forward. It's a little bit of work to prepare upfront all the image variants, but as you can see in the Results, the `2.5x speed increase` is worth it.
-
-### 2) React with NextJS
-
-If you are using NextJS, you don't need to prepare the images upfront if you use their `Image` component.
-
-```
-import Image from "next/image";
-
-...
-
-<Image
-    src={WomanPicture}
-    layout="responsive" //don't forget this attribute
-    />
-```
 
 [See code](https://github.com/andreibarabas/achieving-100ms/compare/S01.E01-before...S01.E01-after)
 
