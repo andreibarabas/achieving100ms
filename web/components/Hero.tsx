@@ -1,5 +1,3 @@
-import Image from "next/image";
-
 export const Hero: React.FC = () => {
   return (
     <div className="hero-background">
