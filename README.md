@@ -14,6 +14,7 @@ Bellow you can find a list of tips & tricks that can help you achieve that goal.
 
 ## Season 1
 
+2. How to use NextJS image component to speed up your website 2.5x times - [Learn more](https://github.com/andreibarabas/achieving-100ms/blob/S01.E02-before/README.md)
 1. How to speed up your website 2.5x times by using responsive images - [Learn more](https://github.com/andreibarabas/achieving-100ms/blob/S01.E01-before/README.md)
 
 ---
