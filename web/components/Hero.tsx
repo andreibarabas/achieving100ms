@@ -1,20 +1,9 @@
 import Image from "next/image";
-import BackgroundImage from "../public/images/background.jpg";
 import WomanPicture from "../public/images/woman.png";
 
 export const Hero: React.FC = () => {
   return (
-    <div>
-      <div className="background-container">
-        {/* NextJS version for using responsive images as background */}
-        <Image
-          priority={true}
-          src={BackgroundImage}
-          layout="fill"
-          objectFit="cover"
-          quality={100}
-        />
-      </div>
+    <div className="hero-background">
       <div className="container col-xxl-8 px-4 py-5">
         <div className="row flex-lg-row-reverse align-items-center g-5 py-5">
           <div className="col-10 col-sm-8 col-lg-6">
