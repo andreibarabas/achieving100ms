@@ -1,4 +1,4 @@
-## S1.E1
+## S1.E2
 
 # How to use NextJS image component to speed up your website 2.5x times
 
