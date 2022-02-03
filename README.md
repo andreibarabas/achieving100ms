@@ -1,6 +1,6 @@
 # Achieving 100ms
 
-💻 Source code from the ["Achieving 100ms"](https://www.tiktok.com/@andreibarabas) TikTok series.
+💻 Source code from the ["Achieving 100ms"](https://www.tiktok.com/@achieving100ms) TikTok series.
 
 ## Why 100ms?
 
