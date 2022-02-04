@@ -27,7 +27,6 @@ export const DebugView: React.FC<{ title: string }> = (props) => {
       <Animated.View style={styles.container}>
         <Text style={styles.title}>{title}</Text>
         {props.children}
-        <Timer start={start} />
       </Animated.View>
     </TapGestureHandler>
   );

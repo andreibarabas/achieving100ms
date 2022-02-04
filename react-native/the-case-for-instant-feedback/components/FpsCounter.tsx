@@ -35,7 +35,7 @@ export default function FpsCounter() {
       if (global.frameTimestamps.length >= 20) {
         const first = global.frameTimestamps.shift();
         const fps = (1000 / (now - first)) * global.frameTimestamps.length;
-        //       console.log(`${fps.toFixed(3)} fps`);
+        console.log(`${fps.toFixed(3)} fps`);
       }
     }
 
