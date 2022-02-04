@@ -6,6 +6,9 @@ import { styles } from "./styles";
 export function Button() {
   const [isLoading, setIsLoading] = useState(false);
 
+  //
+  //
+  //
   const handlePress = () => {
     setIsLoading(true);
 

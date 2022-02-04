@@ -6,7 +6,8 @@ export const styles = StyleSheet.create({
     borderRadius: 8,
     padding: 12,
     flexDirection: "row",
-    justifyContent: "space-between",
+    alignItems: "center",
+    justifyContent: "center",
   },
   loading: {
     marginRight: 6,
