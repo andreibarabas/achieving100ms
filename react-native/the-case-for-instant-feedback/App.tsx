@@ -1,14 +1,21 @@
 import { StatusBar } from "expo-status-bar";
-import { StyleSheet, Text, View } from "react-native";
+import React from "react";
+import { StyleSheet, View } from "react-native";
 import { Button } from "./components/Button";
-import { Timer } from "./components/Timer";
+import { DebugView } from "./components/DebugView";
+import { InstantFeedbackButton } from "./components/InstantFeedbackButton";
 
 export default function App() {
   return (
     <View style={styles.container}>
       <StatusBar style="auto" />
-      <Timer />
-      <Button />
+      <DebugView title="Status quo">
+        <Button />
+      </DebugView>
+
+      <DebugView title="Instant feedback">
+        <InstantFeedbackButton />
+      </DebugView>
     </View>
   );
 }
@@ -16,8 +23,9 @@ export default function App() {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
+    flexDirection: "row",
     backgroundColor: "#fff",
     alignItems: "center",
-    justifyContent: "center",
+    justifyContent: "space-evenly",
   },
 });

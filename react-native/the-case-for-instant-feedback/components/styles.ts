@@ -8,6 +8,8 @@ export const styles = StyleSheet.create({
     flexDirection: "row",
     alignItems: "center",
     justifyContent: "center",
+    height: 40,
+    width: 120,
   },
   loading: {
     marginRight: 6,

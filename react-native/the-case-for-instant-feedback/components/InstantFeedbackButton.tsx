@@ -74,9 +74,10 @@ export function InstantFeedbackButton() {
     >
       <Animated.View style={[styles.button, animatedStyle]}>
         <AnimatedActivityIndicator
+          color={"black"}
           style={[styles.loading, animatedLoadingStyle]}
         />
-        <Text>Instant feedback button</Text>
+        <Text>Press me</Text>
       </Animated.View>
     </TapGestureHandler>
   );

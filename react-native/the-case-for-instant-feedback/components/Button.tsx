@@ -23,8 +23,10 @@ export function Button() {
       disabled={isLoading}
       style={styles.button}
     >
-      {isLoading && <ActivityIndicator style={styles.loading} />}
-      <Text>Regular button</Text>
+      {isLoading && (
+        <ActivityIndicator color={"black"} style={styles.loading} />
+      )}
+      <Text>Press me</Text>
     </TouchableOpacity>
   );
 }
