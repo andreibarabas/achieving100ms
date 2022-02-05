@@ -5,6 +5,7 @@ import {
   SharedValue,
   useDerivedValue,
   useSharedValue,
+  withSequence,
   withTiming,
 } from "react-native-reanimated";
 import { ReText } from "react-native-redash";
@@ -16,23 +17,23 @@ export const Timer: React.FC<{ start: SharedValue<number> }> = (props) => {
   const { start } = props;
 
   // reset now each time start is reset
-  const now = useDerivedValue(() => {
-    console.log("here", start.value);
+  const durationMs = useDerivedValue(() => {
     if (start.value > 0) {
       //start a timer for 10 seconds
-      return withTiming(10000, {
-        duration: 10000,
-        easing: Easing.linear,
-      });
+      return withSequence(
+        withTiming(0, { duration: 0 }), //get to 0 instantly
+        withTiming(10000, {
+          duration: 10000,
+          easing: Easing.linear,
+        })
+      );
     }
 
     return 0;
   });
 
   const formattedDuration = useDerivedValue(() => {
-    console.log("start", start.value, now.value);
-    const durationMs = now.value - start.value;
-    const seconds = durationMs / 1000;
+    const seconds = durationMs.value / 1000;
 
     return `${seconds.toFixed(1)} s`;
   });
