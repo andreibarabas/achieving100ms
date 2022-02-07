@@ -1,41 +1,47 @@
 import React from "react";
 import { StyleSheet } from "react-native";
 import {
+  cancelAnimation,
   Easing,
-  SharedValue,
+  useAnimatedReaction,
   useDerivedValue,
   useSharedValue,
   withSequence,
   withTiming,
 } from "react-native-reanimated";
 import { ReText } from "react-native-redash";
+import { useDebugContext } from "../contexts/DebugContext";
 
 /**
  * Timer that starts when the user presses a button, to be able to track how much time it takes to receive the feedback
  */
-export const Timer: React.FC<{ start: SharedValue<number> }> = (props) => {
-  const { start } = props;
+export const Timer: React.FC = () => {
+  const { start, stop } = useDebugContext();
+  const durationMs = useSharedValue(0);
 
-  // reset now each time start is reset
-  const durationMs = useDerivedValue(() => {
-    if (start.value > 0) {
-      //start a timer for 10 seconds
-      return withSequence(
-        withTiming(0, { duration: 0 }), //get to 0 instantly
-        withTiming(10000, {
-          duration: 10000,
-          easing: Easing.linear,
-        })
-      );
-    }
-
-    return 0;
-  });
+  useAnimatedReaction(
+    () => start.value && stop.value,
+    () => {
+      if (start.value && !stop.value) {
+        //start a timer for 10 seconds
+        durationMs.value = withSequence(
+          withTiming(0, { duration: 0 }), //get to 0 instantly
+          withTiming(10000, {
+            duration: 10000,
+            easing: Easing.linear,
+          })
+        );
+      } else if (stop.value) {
+        cancelAnimation(durationMs);
+        start.value = false;
+        stop.value = false;
+      }
+    },
+    [start, stop]
+  );
 
   const formattedDuration = useDerivedValue(() => {
-    const seconds = durationMs.value / 1000;
-
-    return `${seconds.toFixed(1)} s`;
+    return `${durationMs.value.toFixed(0)} ms`;
   });
 
   return <ReText text={formattedDuration} style={styles.timer}></ReText>;

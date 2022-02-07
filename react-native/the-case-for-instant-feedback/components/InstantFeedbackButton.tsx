@@ -13,6 +13,7 @@ import Animated, {
   useSharedValue,
   withTiming,
 } from "react-native-reanimated";
+import { useDebugContext } from "../contexts/DebugContext";
 import { workForASecond } from "../utils/heavyLoad";
 import { usePressOpacityAnimation } from "../utils/usePressOpacityAnimation";
 import { styles } from "./styles";
@@ -22,6 +23,7 @@ const AnimatedActivityIndicator =
 
 export function InstantFeedbackButton() {
   const { pressGestureHandler, animatedStyle } = usePressOpacityAnimation();
+  const { stop } = useDebugContext();
 
   //
   // the key difference to the normal button is how we manage the loading state
@@ -36,6 +38,7 @@ export function InstantFeedbackButton() {
   const handlePress = () => {
     workForASecond().then(() => {
       isLoading.value = false;
+      stop.value = true;
     });
   };
 

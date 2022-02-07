@@ -1,10 +1,12 @@
 import { useState } from "react";
 import { ActivityIndicator, Text, TouchableOpacity } from "react-native";
+import { useDebugContext } from "../contexts/DebugContext";
 import { workForASecond } from "../utils/heavyLoad";
 import { styles } from "./styles";
 
 export function Button() {
   const [isLoading, setIsLoading] = useState(false);
+  const { stop } = useDebugContext();
 
   //
   //
@@ -14,6 +16,7 @@ export function Button() {
 
     workForASecond().then(() => {
       setIsLoading(false);
+      stop.value = true;
     });
   };
 
