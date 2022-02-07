@@ -1,17 +1,13 @@
-import { useState } from "react";
 import { ActivityIndicator, Text } from "react-native";
 import {
   TapGestureHandler,
   TapGestureHandlerGestureEvent,
-  TouchableOpacity,
 } from "react-native-gesture-handler";
 import Animated, {
   runOnJS,
   useAnimatedGestureHandler,
-  useAnimatedProps,
   useAnimatedStyle,
   useSharedValue,
-  withTiming,
 } from "react-native-reanimated";
 import { useDebugContext } from "../contexts/DebugContext";
 import { workForASecond } from "../utils/heavyLoad";
@@ -33,7 +29,8 @@ export function InstantFeedbackButton() {
   const isLoading = useSharedValue(false);
 
   //
-  //
+  // we don't need to set isLoading true as it is set on the UI thread
+  // imediatelly as the button is released
   //
   const handlePress = () => {
     workForASecond().then(() => {
@@ -64,7 +61,7 @@ export function InstantFeedbackButton() {
   // we show / hide the activity indicator by changing it's opacity
   //
   const animatedLoadingStyle = useAnimatedStyle(() => ({
-    opacity: isLoading.value ? withTiming(1) : 0,
+    opacity: isLoading.value ? 1 : 0,
     display: isLoading.value ? "flex" : "none", //requires so that it does not take up space when there is no loading indicator
   }));
 
