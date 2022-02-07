@@ -5,11 +5,15 @@ import { workForASecond } from "../utils/heavyLoad";
 import { styles } from "./styles";
 
 export function Button() {
+  //
+  // we store the loading state as a react state
+  //
   const [isLoading, setIsLoading] = useState(false);
   const { stop } = useDebugContext();
 
   //
-  //
+  // whenever the user presses, the first thing is turn on the activity indicator
+  // then once it is done, turn it back off
   //
   const handlePress = () => {
     setIsLoading(true);
